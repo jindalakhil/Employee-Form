@@ -72,7 +72,7 @@ body{
 .row-content{
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     margin-bottom: 10px;
     align-items: center;
     border: 0px solid green;
@@ -80,11 +80,13 @@ body{
 
 .label{
     min-width: 140px;
+    /* display: flex wrap; */
 }
 
 label{
     padding: 12px 12px 12px 0;
     display: inline-block;
+    
 }
 
 .text{
@@ -95,9 +97,40 @@ label{
 }
 
 .input{
-    width: 100%;
+    width: 80%;
+    /* max-width: 70%; */
+    display: flex;
+    flex-direction: row;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
 }
+
+.img{
+    border-radius: 100%;
+    padding-right: 20px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+/* .profile-radio-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.profile-radio-content > label{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile{
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
+} */
