@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "https://fonts.google.com/css2?family=Roboto:wght@300;400;500;600;display=swap" rel = "stylesheet">  
-    <title>Emp-Payroll Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/new_payroll_form.css">
     <script defer src="../js/payroll_form.js"></script>
-    <link href="../css/new_payroll_form.css" rel="stylesheet">
-
-
+    <title>Employee Payroll Form</title>
 </head>
 <body>
     <header class="header-content header">
         <div class="logo-content">
-            <img src="../assets/images/logo.png" alt = "Payroll Logo">
+            <img src="../assets/images/logo.png" alt="logo">
             <div>
-                <span class="emp-text">EMPloYEE</span><br>
-                <span class="emp-text emp-payroll">Payroll</span>
+                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
             </div>
         </div>
     </header>
@@ -28,24 +26,7 @@
                 <input class="input" type="text" id="name" name="name" placeholder="Your Name.." required>
             </div>
             <div class="row-content">
-                <label class="label text" for="photo">Profile image</label>
-                <div class="profile">
-                     <input type="radio" class="selected" id="1" name="photo" >
-                     <label for="1"><img class="img" src="../assets/profile-images/Ellipse -1.png" alt=""></label>
-                </div>
-                <div class="profile">
-                    <input type="radio" class="selected" id="2" name="photo" >
-                    <label for="2"><img class="img" src="../assets/profile-images/Ellipse -2.png" alt=""></label>
-                </div>
-                <div class="profile"> 
-                    <input type="radio" class="selected" id="3" name="photo" >
-                    <label for="3"><img class="img" src="../assets/profile-images/Ellipse -3.png" alt=""></label>
-                </div>
-                <div class="profile">  
-                    <input type="radio" class="selected" id="4" name="photo" >
-                    <label for="4"><img class="img" src="../assets/profile-images/Ellipse -4.png" alt="">
-                </div>
-                <!-- <label class="label text" for="profile">Profile image</label>
+                <label class="label text" for="profile">Profile image</label>
                 <div class="profile-radio-content">
                     <label>
                         <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
@@ -63,19 +44,15 @@
                         <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png" required>
                         <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png">
                     </label>
-                </div> -->
+                </div>
             </div>
             <div class="row-content">
                 <label class="label text" for="gender">Gender</label>
-                <div class="gender-radio-content">
-                    <label>
-                        <input type="radio" id="male-gendeer" name="gender" value="male" required>
-                        Male
-                    </label>
-                    <label>
-                        <input type="radio" id="female-gender" name="gender" value="female" required>
-                        Female
-                    </label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">Female</label>
                 </div>
             </div>
             <div class="row-content">
@@ -95,8 +72,8 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="salary">Choose Your Salary: </label>
-                <input class="input range" type="range" name="salary" id="salary" min="1000" max="10000" step="100" value="5000">
-                <output class="salary-output text" for="salary">5000</output>
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+                <output class="salary-output text" for="salary">400000</output>
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
@@ -159,10 +136,10 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
-                <textarea id="notes" class="input" name="Notes" placeholder="additional info.." style="height: 100px;"></textarea>
+                <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"></textarea>
             </div>
             <div class="buttonParent">
-                <a href="./home.html" class="resetButton button cancelButton">cancel</a>
+                <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                     <button type="reset" class="resetButton button">Reset</button>
