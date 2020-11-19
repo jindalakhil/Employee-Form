@@ -134,3 +134,12 @@ label{
     border-radius: 50%;
     margin-left: 12px;
 } */
+.gender-radio-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gender-radio-content > label {
+    display: flex;
+
+}
