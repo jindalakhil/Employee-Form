@@ -155,6 +155,10 @@ select{
     background-color: transparent;
 }
 
+.range{
+    width: 75%;
+}
+
 .buttonParent{
     display: flex;
     margin-bottom: 10px;
