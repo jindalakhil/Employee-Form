@@ -4,17 +4,17 @@ let employeePayrollObj = {};
 
 window.addEventListener('DOMContentLoaded',(event) => {
   const name = document.querySelector("#name");
-name.addEventListener('input', function(){
-  if(name.value.length == 0){
-    setTextValue(".text-error", "");
-    return;
-  }
-  try{
-    (new EmployeePayrollData()).name = name.value;
-    setTextValue(".text-error", "");
-  }catch(e){
-    setTextValue(".text-error", e);
-  }
+  name.addEventListener('input', function(){
+    if(name.value.length == 0){
+      setTextValue(".text-error", "");
+      return;
+    }
+    try{
+      (new EmployeePayrollData()).name = name.value;
+      setTextValue(".text-error", "");
+    }catch(e){
+      setTextValue(".text-error", e);
+    }
 });
 const startDate = document.querySelector("#startDate");
 const day = document.querySelector("#day");
@@ -72,14 +72,14 @@ function createAndUpdateStorage(){
   let employeeList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
   if(employeeList){
     let employee = employeeList.find(emp => emp._id == employeePayrollObj._id);
-    if(!employee) employeeList.push(saveData());
+    if(!employee) employeeList.push(createEmpData());
     else{
       const index = employeeList.map(emp => emp._id)
                                 .indexOf(employee._id);
       employeeList.splice(index, 1, createEmpData(employee._id));
     }
   }else{
-    employeeList = [saveData()];
+    employeeList = [createEmpData()];
   }
   localStorage.setItem("EmployeePayrollList", JSON.stringify(employeeList));
   alert(employeeList.toString());
